@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package router_config.v1;
+
+message Route {
+  bytes owner = 1;
+  bytes payer = 2;
+  uint32 subnet_size = 3;
+  repeated bytes addresses = 4;
+  bytes owner_signature = 5;
+  bytes payer_signature = 6;
+  uint64 oui = 7;
+}
