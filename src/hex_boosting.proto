@@ -7,22 +7,24 @@ import "service_provider.proto";
 message boosted_hex_info {
   // The res12 h3 index of the boosted hex
   uint64 location = 1;
-  // The timestamp of the start of the boost period
+  // Unix timestamp in seconds of the start of the boost period
   // 0 if the boosting has not yet started
-  int64 start_ts = 2;
+  uint64 start_ts = 2;
+  // Unix timestamp in seconds of the end of the boost period
+  // 0 if the boosting has not yet started
+  uint64 end_ts = 3;
   // The length of the boost period in months
-  uint32 period_length = 3;
-  // the minimum number of periods to boost
-  uint32 minimum_periods = 4;
-  // the multiplier applied to this hex
-  // value is 0.0 to 1.0 multiplied by 1000
-  uint32 multiplier = 5;
+  uint32 period_length = 4;
+  // the multipliers valid for this hex
+  // for each period
+  // values are 0.0 to 1.0 multiplied by 1000
+  repeated uint32 multipliers = 5;
 }
 
-message updated_boosted_hexes_v1 {
-  /// Unix timestamp in seconds which the boosted hexes info is valid for
+message boosted_hex_update {
+  // Unix timestamp in seconds the hex was updated
   uint64 timestamp = 1;
-  // Details of all modified hexes
-  repeated boosted_hex_info hexes = 2;
+  // Details of the updated hex
+  boosted_hex_info update = 2;
 }
 
