@@ -13,7 +13,8 @@ message boosted_hex_info_v1 {
   // Unix timestamp in seconds of the end of the boost period
   // 0 if the boosting has not yet started
   uint64 end_ts = 3;
-  // The length of the boost period in months
+  // The length of the boost period in months expressed as seconds
+  // where one month = 30 days
   uint32 period_length = 4;
   // the multipliers valid for this hex
   // for each period
