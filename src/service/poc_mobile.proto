@@ -344,15 +344,6 @@ message boosted_hexes {
   uint32 multiplier = 1;
   // The res12 h3 index of the boosted hex
   uint64 location = 2;
-  // The on chain entity key of service provider providing the boost
-  service_provider service_provider_id = 3;
-}
-
-message boosted_hexes_v1 {
-  /// Unix timestamp in seconds which the boosted hexes info is valid for
-  uint64 timestamp = 1;
-  // Details of all modified hexes
-  repeated boosted_hex_info hexes = 2;
 }
 
 message gateway_reward {
@@ -497,4 +488,3 @@ message invalid_data_transfer_ingest_report_v1 {
   // epoch
   uint64 timestamp = 3;
 }
-
