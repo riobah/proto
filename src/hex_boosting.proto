@@ -4,7 +4,7 @@ package helium.hex_boosting;
 
 import "service_provider.proto";
 
-message boosted_hex_info {
+message boosted_hex_info_v1 {
   // The res12 h3 index of the boosted hex
   uint64 location = 1;
   // Unix timestamp in seconds of the start of the boost period
@@ -21,10 +21,10 @@ message boosted_hex_info {
   repeated uint32 multipliers = 5;
 }
 
-message boosted_hex_update {
+message boosted_hex_update_v1 {
   // Unix timestamp in seconds the hex was updated
   uint64 timestamp = 1;
   // Details of the updated hex
-  boosted_hex_info update = 2;
+  boosted_hex_info_v1 update = 2;
 }
 

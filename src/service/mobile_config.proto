@@ -220,7 +220,7 @@ message boosted_hex_info_stream_req_v1 {
 
 message boosted_hex_info_stream_res_v1 {
   // a list of boosted hex info
-  repeated boosted_hex_info hexes = 1;
+  repeated boosted_hex_info_v1 hexes = 1;
   // unix epoch timestamp in seconds
   uint64 timestamp = 2;
   // pubkey binary of the signing keypair
