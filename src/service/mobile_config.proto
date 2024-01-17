@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package helium.mobile_config;
 
-import "service_provider.proto";
+import "hex_boosting.proto";
 
 // ------------------------------------------------------------------
 // Message Definitions
@@ -226,27 +226,6 @@ message boosted_hex_info_stream_res_v1 {
   // pubkey binary of the signing keypair
   bytes signer = 3;
   bytes signature = 4;
-}
-
-message boosted_hex_info {
-  // The res12 h3 index of the boosted hex
-  uint64 location = 1;
-  // The timestamp of the start of the boost period
-  // 0 if the boosting has not yet started
-  int64 start_ts = 2;
-  // The length of the boost period in months
-  uint32 period_length = 3;
-  // the minimum number of periods to boost
-  uint32 minimum_periods = 4;
-  // the boost amount in USD @ 10^6
-  // TODO: confirm if boost price should be mobile or USD
-  //       If USD, does mobile verifier convert that to mobile at the prevailing
-  //       mobile price at the point of rewarding ? this total available boost
-  //       in MOBILE then gets distributed across all radios providing coverage
-  //       in the boosted hex
-  uint64 boost_price = 5;
-  // The on chain entity key of service provider providing the boost
-  service_provider service_provider_id = 6;
 }
 
 // ------------------------------------------------------------------

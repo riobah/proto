@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package helium.hex_boosting;
+
+import "service_provider.proto";
+
+message boosted_hex_info {
+  // The res12 h3 index of the boosted hex
+  uint64 location = 1;
+  // The timestamp of the start of the boost period
+  // 0 if the boosting has not yet started
+  int64 start_ts = 2;
+  // The length of the boost period in months
+  uint32 period_length = 3;
+  // the minimum number of periods to boost
+  uint32 minimum_periods = 4;
+  // the boost price in USD @ 10^6
+  uint64 boost_price = 5;
+  // The on chain entity key of service provider providing the boost
+  service_provider service_provider_id = 6;
+}
