@@ -38,6 +38,8 @@ pub mod services {
         pub use entity_server::{Entity, EntityServer};
         pub use gateway_client::GatewayClient;
         pub use gateway_server::{Gateway, GatewayServer};
+        pub use hex_boosting_client::HexBoostingClient;
+        pub use hex_boosting_server::{HexBoosting, HexBoostingServer};
     }
 
     pub mod downlink {
