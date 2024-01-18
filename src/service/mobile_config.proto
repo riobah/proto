@@ -272,7 +272,7 @@ service admin {
   rpc remove_key(admin_remove_key_req_v1) returns (admin_key_res_v1);
 }
 
-service boosted_hexes {
+service hex_boosting {
   // Get a stream of hex boost info
   rpc info_stream(boosted_hex_info_stream_req_v1)
       returns (stream boosted_hex_info_stream_res_v1);
