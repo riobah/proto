@@ -213,6 +213,9 @@ message admin_key_res_v1 {
 }
 
 message boosted_hex_info_stream_req_v1 {
+  // max number of boosted hex info records in each message of the response
+  // stream
+  uint32 batch_size = 1;
   // pubkey binary of the signing keypair
   bytes signer = 2;
   bytes signature = 3;
