@@ -28,4 +28,3 @@ message boosted_hex_update_v1 {
   // Details of the updated hex
   boosted_hex_info_v1 update = 2;
 }
-
