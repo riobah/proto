@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package helium.hex_boosting;
+package helium;
 
 import "service_provider.proto";
 
